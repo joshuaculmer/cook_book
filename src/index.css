@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ─── Tailwind theme token registration ─── */
+@theme {
+  --color-bg:      var(--cb-bg);
+  --color-text:    var(--cb-text);
+  --color-accent:  var(--cb-accent);
+  --color-surface: var(--cb-surface);
+  --color-border:  var(--cb-border);
+  --color-muted:   var(--cb-muted);
+
+  --font-sans:    'Lato', system-ui, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+}
+
+/* ─── Warm & Rustic ─── */
+[data-theme="warm"] {
+  --cb-bg:      #FDF6EC;
+  --cb-text:    #5C3D2E;
+  --cb-accent:  #D4813A;
+  --cb-surface: #F5E6D0;
+  --cb-border:  #E5C9A5;
+  --cb-muted:   #9A7560;
+}
+
+/* ─── Clean & Modern ─── */
+[data-theme="modern"] {
+  --cb-bg:      #FFFFFF;
+  --cb-text:    #111111;
+  --cb-accent:  #111111;
+  --cb-surface: #F4F4F4;
+  --cb-border:  #E0E0E0;
+  --cb-muted:   #6B6B6B;
+}
+
+/* ─── Elegant & Dark ─── */
+[data-theme="dark"] {
+  --cb-bg:      #1C1C1C;
+  --cb-text:    #F5F0E8;
+  --cb-accent:  #C9A84C;
+  --cb-surface: #2A2A2A;
+  --cb-border:  #3A3A3A;
+  --cb-muted:   #A09080;
+}
+
+/* ─── Base resets ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cb-bg);
+  color: var(--cb-text);
+  font-family: var(--font-sans);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
